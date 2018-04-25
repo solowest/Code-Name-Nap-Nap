@@ -26,12 +26,11 @@
   // reads the value of the variable resistor 
   value1_2 = analogRead(joyPin1);
   value2_2 = analogRead(joyPin2);
-  if(value1_2 != value1 || value2_2 != value2)
-  {
+
   Serial.print('J');
   Serial.print(treatValue(value1_2));
   Serial.println(treatValue(value2_2)); 
-  }
+  
   if(treatValue(value1_2) != 52 || treatValue(value2_2) != 52) {
     digitalWrite(ledPin, HIGH);
   }           
